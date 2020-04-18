@@ -1,0 +1,53 @@
+<ion-content class="success-page">
+  <ion-row class="setps ">
+    <ion-col>
+      <div class="icon active">
+        <ion-icon name="map"></ion-icon>
+      </div>
+      <div>
+        <div class="line" style="width: 50%; margin-left: 50%; background-color: #F57F17;">
+        </div>
+      </div>
+      <div class="step text-active">
+        เลือกสถานที่ส่ง
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="icon active">
+        <ion-icon name="cart"></ion-icon>
+      </div>
+      <div>
+        <div class="line" style="background-color: #F57F17;">
+        </div>
+      </div>
+      <div class="step text-active ">
+        เลือกสินค้า
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="icon active">
+        <ion-icon name="checkbox"></ion-icon>
+      </div>
+      <div>
+        <div class="line" style="width: 50%;background-color: #F57F17;">
+        </div>
+      </div>
+      <div class="step text-active"> ส่งคำสั่งซื้อ</div>
+    </ion-col>
+  </ion-row>
+  <div class="content">
+    <div class="img">
+      <img src="../../assets/images/ic_alarm_on_24px.png">
+    </div>
+    <h3 class="text-success">ส่งคำสั่งซื้อเรียบร้อยแล้ว</h3>
+    <h3 class="text2">
+      ระบบกำลังส่งข้อมูลให้ผู้ขายในพื้นที่ของท่าน<br />
+      กรุณารอการเสนอราคาที่ดีที่สุดจากผู้ขาย</h3>
+    <div class="text3">* ระบบจะส่งคำสั่งซื้อของท่านเพื่อให้ผู้ขายเสนอราคาแข่งกลับมา<br />
+      ระบบเสนอราคาจะมีระยะเวลา 24 ชมก่อนปิดการประมูล</div>
+    <div class="btn">
+      <ion-button shape="round" (click)="next()" size="small">ดูการเสนอราคา <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

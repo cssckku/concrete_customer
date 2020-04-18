@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-title>บัญชีของฉัน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="header">
+    <div class="avatar">
+      <img src="../../assets/images/186313.png">
+
+    </div>
+    <div class="add-camera">
+      <img src="../../assets/images/ic_add_a_photo_24px.png">
+    </div>
+    <div class="content">
+      <h4>{{data.name}}</h4>
+      <div class="tel">{{data.phone}}</div>
+      <ion-button class="btn-edit" shape="round">
+        <img src="../../assets/images/ic_edit_24px.png"> แก้ไขข้อมูล
+      </ion-button>
+    </div>
+    <div class="detail">
+      <div class="text">คะแนนสะสมของคุณ</div>
+      <div class="scroe"><img src="../../assets/images/ic_local_activity_24px.png"> 15,458</div>
+      <ion-button class="btn-detail" shape="round">
+        <ion-icon name="pencil-outline"></ion-icon>
+        ดูรายละเอียด
+      </ion-button>
+    </div>
+  </div>
+  <ion-list>
+    <ion-item button>
+      <img src="../../assets/images/ic_language_24px.png">
+      <ion-label>
+        <h3>เปลี่ยนภาษา</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item button>
+      <img src="../../assets/images/ic_lock_outline_24px.png">
+      <ion-label>
+        <h3>เปลี่ยนรหัสผ่าน</h3>
+      </ion-label>
+    </ion-item>
+    <ion-item button>
+      <img src="../../assets/images/ic_notifications_active_24px.png">
+      <ion-label>
+        <h3>ตั้งค่าการแจ้งเตือน</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button>
+      <img src="../../assets/images/ic_settings_24px.png">
+      <ion-label>
+        <h3>ตั้งค่าระบบเพิ่มเติม</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button>
+      <img src="../../assets/images/ic_mail_24px.png">
+      <ion-label>
+        <h3>ติดต่อทีมงาน</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button>
+      <img src="../../assets/images/ic_block_24px.png">
+      <ion-label>
+        <h3>ปิดบัญชีการใช้งาน</h3>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button (click)="logout()">
+      <img src="../../assets/images/ic_system_update_alt_24px.png">
+      <ion-label>
+        <h3>ออกจากระบบ</h3>
+      </ion-label>
+    </ion-item>
+
+
+  </ion-list>
+  <div class="version">Concreate Delivery Version 1.0</div>
+
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-title>การสั่งซื้อ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top" color="primary">
+      <ion-tab-button [ngClass]="{'selected':selected==0}" (click)="page('order-wait')" color="danger">
+        <ion-label>รอชำระ</ion-label>
+        <!-- <ion-badge>6</ion-badge> -->
+      </ion-tab-button>
+
+      <ion-tab-button [ngClass]="{'selected':selected==1}" (click)="page('order-wait-send')">
+        <ion-label>รอจัดส่ง</ion-label>
+      </ion-tab-button>
+      <ion-tab-button [ngClass]="{'selected':selected==2}" (click)="page('order-send')">
+        <ion-label>ส่งแล้ว</ion-label>
+      </ion-tab-button>
+      <ion-tab-button [ngClass]="{'selected':selected==3}" (click)="page( 'order-cancel')">
+        <ion-label>ยกเลิก</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

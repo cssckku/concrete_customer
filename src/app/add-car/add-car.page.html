@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>เลือกขนาดรถโม่</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="order_page">
+  <img src="../../assets/images/scr-067.png">
+  <div class="btn">
+    <ion-button shape="round" (click)="select(1)">
+      เลือกรถโม่เล็ก
+    </ion-button>
+  </div>
+  <img src="../../assets/images/scr-068.png">
+  <div class="btn">
+    <ion-button shape="round" (click)="select(2)">เลือกรถโม่ใหญ่</ion-button>
+  </div>
+
+</ion-content>

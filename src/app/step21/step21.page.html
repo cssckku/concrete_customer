@@ -1,0 +1,121 @@
+
+<ion-content class="order_page">
+  <ion-row class="setps ">
+    <ion-col>
+      <div class="icon active">
+        <ion-icon name="map"></ion-icon>
+      </div>
+      <div>
+        <div class="line" style="width: 50%; margin-left: 50%; background-color: #F57F17;">
+        </div>
+      </div>
+      <div class="step text-active ">
+        เลือกสถานที่ส่ง
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="icon active">
+        <ion-icon name="cart"></ion-icon>
+      </div>
+      <div>
+        <div class="line " style="">
+        </div>
+        <div class="line " style="background-color: #F57F17; width: 50%;">
+        </div>
+      </div>
+      <div class="step text-active ">
+        เลือกสินค้า
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="icon">
+        <ion-icon name="checkbox"></ion-icon>
+      </div>
+      <div>
+        <div class="line" style="width: 50%;;">
+        </div>
+      </div>
+      <div class="step"> ส่งคำสั่งซื้อ</div>
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <div class="header1">
+      <h3>สินค้าที่คุณเลือก : 1.สำหรับงาน ฐานราก เสา คาน</h3>
+      <p>หมวดหมู่ : 2.โครงสร้างทั่วไป (ฐานราก, เสา, คาน)</p>
+    </div>
+    <div class="full">
+
+      <div class="head1">โครงสร้างทั่วไป (ฐานราก, เสา, คาน)</div>
+      <div class="head21">คอนกรีต CPAC Super Plus</div>
+      <img class="img" src="../../assets/images/Intersection 2.png">
+
+    </div>
+    <div class="textbox">
+      <h3>รหัสสินค้า : 28F1A4AS00</h3>
+      <h3>ประเภทคอนกรีต : คอนกรีต CPAC Super Plus</h3>
+      <h3>วิธีการใช้งาน :</h3>
+      <div>
+        <p class="text_more" [ngClass]="{'auto': h_auto}">
+          - แบบหล่อคอนกรีตต้องสะอาด และควรทาน้ำมันที่แบบ<br />
+          เพื่อทำให้ผิวคอนกรีตเรียบเนียนสวยงาม<br />
+          - แบบหล่อต้องแข็งแรง มีค้ำยันเพียงพอ รอยต่อของแบบหล่อ<br />
+          ต้องติดสนิท เพื่อป้องกันน้ำปูนรั่วไหล<br />
+          - การเตรียมเหล็กก่อนเข้าแบบ ควรมีระยะห่างระหว่างเหล็กเสริม<br />
+          กับผิวคอนกรีตเป็นไปตามที่กำหนด หรือโดยทั่วไปจะกำหนดที่ 2.5 ซม.<br />
+          - จุดตกคอนกรีต ต้องไม่เกิน 1.5 เมตร เพื่อป้องกันคอนกรีต<br />
+          เกิดการแยกตัว<br />
+          - ควรจี้เขย่า เพื่อป้องกันการเกิดโพรง<br />
+          - ควรถอดแบบข้าง หลังเทอย่างน้อย 48 ชั่วโมง<br />
+          - ควรบ่มคอนกรีตต่อเนื่องอย่างน้อย 7 วัน หลังจากแกะแบบเสาแล้ว<br />
+          โดยใช้พลาสติกหุ้มรอบเสา กรณีที่จำเป็นต้องใช้งานก่อน<br />
+          อาจทำให้กำลังคอนกรีตด้อยลง<br />
+        </p>
+        <div class="hidden_text" (click)="h_auto=true" *ngIf="!h_auto">
+          <ion-icon name="arrow-down"></ion-icon>
+        </div>
+        <div class="show_text" (click)="h_auto=false" *ngIf="h_auto">
+          <ion-icon name="arrow-up"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="formsale">
+      <h3>รายละเอียดการสั่งซื้อ</h3>
+      <ion-list>
+
+        <ion-item>
+          <ion-datetime displayFormat="MM/DD/YYYY" placeholder="วันที่ต้องการใช้งาน *" display-timezone="utc">
+          </ion-datetime>
+          <img src="../../assets/images/ic_date_range_24px.png" style="right: 0px;position: absolute;">
+        </ion-item>
+        <ion-item>
+          <ion-datetime placeholder="เลือกเวลารับสินค้า *" displayFormat="HH:mm"></ion-datetime>
+          <img src="../../assets/images/ic_schedule_24px.png" style="right: 0px; position: absolute;">
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="จำนวนคิว *" type="number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <img src="../../assets/images/ic_keyboard_24px.png">
+          <ion-label style="color: #056BB8; padding-left: 5px;" (click)="calculate()">คำนวณปริมาณ</ion-label>
+        </ion-item>
+        <div style="font-size: 12px;">
+          <ion-checkbox color="primary"></ion-checkbox>
+          <ion-label style="padding-left: 10px;">ยอมรับ</ion-label>
+          <ion-label style="color: #053CBB;" (click)="agreement()"> ข้อกำหนดเงื่อนไขของสินค้าและการรับบริการ</ion-label>
+        </div>
+      </ion-list>
+    </div>
+    <div class="btn">
+      <ion-button shape="round" color="tertiary" (click)="back()" size="small">
+        <ion-icon name="arrow-back"></ion-icon> ย้อนกลับ
+      </ion-button>
+      <ion-button shape="round" size="small" (click)="next()" style="position: absolute;right: 20px;">
+        ถัดไป <ion-icon name="arrow-forward"></ion-icon>
+
+      </ion-button>
+    </div>
+
+
+  </ion-row>
+
+</ion-content>

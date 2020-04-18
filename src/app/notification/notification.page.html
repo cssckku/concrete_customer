@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-title>แจ้งเตือน</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="top" color="primary">
+      <ion-tab-button [ngClass]="{'selected':selected==0}" (click)="page('auction')" color="danger">
+        <ion-label>การประมูลราคา</ion-label>
+        <!-- <ion-badge>6</ion-badge> -->
+      </ion-tab-button>
+
+      <ion-tab-button [ngClass]="{'selected':selected==1}" (click)="page('noti-system')">
+        <ion-label>จากระบบ</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

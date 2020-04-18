@@ -1,0 +1,66 @@
+.header {
+  background-image: url("../../assets/images/SCG-open@2x.png");
+  height: 60vh;
+  background-size: 100%;
+  .connent {
+    ion-button {
+      color: #fff;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-size: 12px;
+    }
+    width: 100%;
+    height: 100%;
+    background-color: #a2a4ab99;
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
+    img {
+      width: 60px;
+    }
+    .pin {
+      margin-top: 20px;
+    }
+    .cicles {
+      .cicle {
+        border-radius: 50%;
+        border: solid 2px #fff;
+        width: 13px;
+        height: 13px;
+        margin: 3px;
+        display: inline-block;
+      }
+      .w {
+        background-color: #fff;
+      }
+    }
+    .fogotpin {
+      color: #fff;
+      margin-top: 20px;
+      font-weight: 100;
+      display: block;
+    }
+  }
+}
+.buttons {
+  width: 100%;
+  height: 40vh;
+  .button1 {
+    width: 33.333%;
+    height: 25%;
+    min-height: 25%;
+    font-size: 30px;
+    color: #888;
+    text-align: center;
+    display: inline-table;
+    border-style: solid;
+    border-color: #888;
+    border-width: 0px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    ion-button {
+      color: #000;
+    }
+  }
+}

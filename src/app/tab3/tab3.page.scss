@@ -1,0 +1,96 @@
+.chat {
+  .chat-content {
+    justify-content: center;
+    .time-show {
+      justify-content: center;
+      text-align: center;
+      margin: 15px auto;
+      background-color: #efefef;
+      border-radius: 20px;
+      font-size: 10px;
+      padding: 3px;
+      color: #7d7b7a;
+      display: block;
+      width: 80px;
+    }
+    .item {
+      .avatar {
+        margin: 5px 20px;
+        width: 30px;
+        height: 30px;
+        display: inline;
+      }
+      .text-content {
+        font-size: 12px;
+        text-align: left;
+        padding: 8px;
+        margin-top: -50px;
+        width: calc(100vw - 80px);
+        color: #000000;
+        background-color: #efefef;
+      }
+      .time {
+        color: #7d7b7a;
+        font-size: 10px;
+      }
+    }
+    .i-left {
+      .text-content {
+        margin-left: 60px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      .time {
+        margin-left: 60px;
+        margin-top: 3px;
+        display: block;
+        margin-bottom: 13px;
+      }
+    }
+    .i-right {
+      .text-content {
+        margin-top: 0px;
+        margin-left: 60px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: #f57f17;
+        margin-bottom: 35px;
+        color: #ffffff;
+      }
+      .time {
+        float: right;
+        margin-right: 25px;
+        margin-top: -30px;
+      }
+    }
+  }
+}
+.buttombox{
+    width: 100%;
+    height: 40px;
+}
+.chat-input{
+    height: 45px;
+    background-color: #FBFBFB;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    ion-icon{
+        font-size: 28px;
+        color:#7D7B7A;
+       
+    }
+    ion-input{
+
+       
+        background-color: #E6E6E6;
+        border-radius: 20px;
+        padding-left: 5px;
+        height:30px;
+        margin: 0 5px;
+        margin-top: -12px;
+    }
+
+}

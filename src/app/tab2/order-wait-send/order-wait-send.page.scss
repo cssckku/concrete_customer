@@ -1,0 +1,50 @@
+ion-list {
+    padding: 0px;
+    ion-item {
+      --padding-start: 0px;
+      ion-avatar {
+        padding: 0px;
+        margin: 0px;
+        height: 95px;
+        width: 95px;
+        img {
+          border-radius: 0px;
+          width: 95px;
+        }
+      }
+      ion-label {
+        margin: 0px;
+        padding: 3px 10px;
+        .order_id {
+          font-size: 12px;
+          font-weight: bold;
+          color: #515050;
+        }
+        h2 {
+          font-size: 20px;
+          color: #515050;
+        }
+        .wait_payment {
+          font-size: 12px;
+          color: #ff0000;
+          position: absolute;
+          right: 16px;
+          margin-top: -20px;
+        }
+        .wait_send{
+            font-size: 12px;
+            color: #F57F17;
+            position: absolute;
+            right: 16px;
+            margin-top: -20px;
+        }
+        .number {
+          color: #f57f17;
+        }
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  

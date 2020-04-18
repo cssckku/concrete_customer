@@ -1,0 +1,137 @@
+<ion-content class="order_page">
+  <ion-row class="setps">
+    <ion-col>
+
+      <div>
+        <div class="line" style="width: 50%; margin-left: 50%;">
+        </div>
+      </div>
+      <div class="icon active">
+        <ion-icon name="map"></ion-icon>
+      </div>
+      <div class="step text-active">
+        เลือกสถานที่ส่ง
+      </div>
+
+    </ion-col>
+    <ion-col>
+      <div class="icon">
+        <ion-icon name="cart"></ion-icon>
+      </div>
+      <div>
+        <div class="line">
+        </div>
+      </div>
+
+      <div class="step">
+        เลือกสินค้า
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="icon">
+        <ion-icon name="checkbox"></ion-icon>
+      </div>
+      <div class="line" style="width: 50%;;">
+      </div>
+      <div class="step"> ส่งคำสั่งซื้อ</div>
+      <div>
+      </div>
+
+    </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col>
+      <form [formGroup]="step1" (ngSubmit)="doLogin()">
+        <ion-list class="inputs-list" lines="full">
+
+          <ion-item class="input-item">
+            <ion-label>เลือกจังหวัด</ion-label>
+            <ionic-selectable   [items]="ports"
+            itemValueField="id"
+            itemTextField="name"
+            [canSearch]="true"
+            (onChange)="portChange($event)">
+          </ionic-selectable>
+          
+
+          </ion-item>
+  
+          <ion-item class="input-item">
+            <ion-label>เลือกเขต/อำเภอ</ion-label>
+            <ion-select placeholder="Select One" formControlName="distric">
+              <ion-select-option value="f">กทม</ion-select-option>
+              <ion-select-option value="m">กาฬสินธ์</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div class="error-container">
+            <ng-container *ngFor="let validation of validation_messages.district">
+              <div class="error-message" *ngIf="step1.get('distric').hasError(validation.type) ">
+                <ion-icon name="information-circle-outline"></ion-icon>
+                <span>{{ validation.message }}</span>
+              </div>
+            </ng-container>
+          </div>
+          <ion-item class="input-item">
+            <ion-label>เลือกแขวง/ตำบล</ion-label>
+            <ion-select placeholder="Select One" formControlName="subdistrict">
+              <ion-select-option value="f">กทม</ion-select-option>
+              <ion-select-option value="m">กาฬสินธ์</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <div class="error-container">
+            <ng-container *ngFor="let validation of validation_messages.subdistrict">
+              <div class="error-message"
+                *ngIf="step1.get('subdistrict').hasError(validation.type) && (step1.get('subdistrict').dirty || step1.get('subdistrict').touched)">
+                <ion-icon name="information-circle-outline"></ion-icon>
+                <span>{{ validation.message }}</span>
+              </div>
+            </ng-container>
+          </div>
+          <ion-item class="input-item">
+            <ion-input type="text" placeholder="ชื่อสถานที่จัดส่ง *" formControlName="address" clearInput
+              autocapitalize="off" inputmode="text"></ion-input>
+            <!--  <small>ตัวอย่างเช่น บ้านเลขที่ 123 ซ.สุขุมวิท2 เข้าไป 100 ม. ขวามือติด 7-11</small> -->
+          </ion-item>
+          <ion-item class="input-item">
+
+            <small>ตัวอย่างเช่น บ้านเลขที่ 123 ซ.สุขุมวิท2 เข้าไป 100 ม. ขวามือติด 7-11</small>
+          </ion-item>
+
+          <ion-item class="input-item">
+            <ion-label>เลือกรถโม่ *</ion-label>
+            <img (click)="select_car()" src="../../assets/images/scr-065.png">
+          </ion-item>
+          <div class="error-container">
+            <ng-container>
+              <div class="error-message">
+                <ion-icon name="information-circle-outline"></ion-icon>
+                <span>เลือกชนิดและขนาดรถโม่ก่อน</span>
+              </div>
+            </ng-container>
+          </div>
+          <ion-list-header>
+            <ion-label>
+              ข้อมูลผู้รับสินค้า
+            </ion-label>
+          </ion-list-header>
+          <ion-item>
+            <ion-checkbox></ion-checkbox>
+            <ion-label class="check"> ข้อมูลเดียวกัน</ion-label>
+            <ion-checkbox></ion-checkbox>
+            <ion-label class="check"> เพิ่มผู้รับบุคคลอื่น</ion-label>
+          </ion-item>
+          <div class="btn">
+            <ion-button shape="round" color="tertiary" (click)="back()">
+              <ion-icon name="arrow-back"></ion-icon> กลับหน้าหลัก
+            </ion-button>
+            <ion-button shape="round" style="position: absolute;            right: 0px;" (click)="next()">ถัดไป
+              <ion-icon name="arrow-forward"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-list>
+      </form>
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>

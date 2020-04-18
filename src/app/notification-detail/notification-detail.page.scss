@@ -1,0 +1,26 @@
+ion-toolbar {
+  ion-buttons {
+    position: absolute;
+  }
+}
+ion-button {
+  height: 35px;
+  font-size: 14px;
+  min-width: 62px;
+}
+
+.content {
+  padding: 20px 20px;
+  h1 {
+    font-size: 20px;
+    color: #7d7b7a;
+    border-bottom: solid 2px #f57f17;
+    display: inline;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+.buttons{
+    padding: 20px;
+}

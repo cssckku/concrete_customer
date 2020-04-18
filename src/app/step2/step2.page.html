@@ -1,0 +1,68 @@
+<ion-content class="order_page">
+  <ion-row class="setps ">
+    <ion-col>
+      <div class="icon active">
+        <ion-icon name="map"></ion-icon>
+      </div>
+      <div>
+        <div class="line" style="width: 50%; margin-left: 50%; background-color: #F57F17;">
+        </div>
+      </div>
+      <div class="step text-active ">
+        เลือกสถานที่ส่ง
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="icon active">
+        <ion-icon name="cart"></ion-icon>
+      </div>
+      <div>
+        <div class="line " style="">
+        </div>
+        <div class="line " style="background-color: #F57F17; width: 50%;">
+        </div>
+      </div>
+      <div class="step text-active ">
+        เลือกสินค้า
+      </div>
+    </ion-col>
+    <ion-col>
+      <div class="icon">
+        <ion-icon name="checkbox"></ion-icon>
+      </div>
+      <div>
+        <div class="line" style="width: 50%;;">
+        </div>
+      </div>
+      <div class="step"> ส่งคำสั่งซื้อ</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <div class="full">
+
+      <div class="head1">โครงสร้างทั่วไป (ฐานราก, เสา, คาน)</div>
+      <div class="head21">คอนกรีต CPAC Super Plus</div>
+      <ion-button shape="round" color="secondary" size="small" (click)="select(1)">สั่งซื้อ <ion-icon
+          name="arrow-forward"></ion-icon>
+      </ion-button>
+      <img class="img" src="../../assets/images/Intersection 2.png">
+
+
+    </div>
+  </ion-row>
+  <ion-row>
+    <div class="full">
+      <div class="head1">พื้นบ้าน / ลานคอนกรีต</div>
+      <div class="head22">คอนกรีตเททับหน้า (Topping)</div>
+      <ion-button shape="round" color="secondary" size="small" (click)="select(2)">สั่งซื้อ <ion-icon
+          name="arrow-forward"></ion-icon>
+      </ion-button>
+      <img class="img" src="../../assets/images/Intersection 3.png">
+
+    </div>
+    <ion-button shape="round" color="tertiary" size="small" style="margin-left: 10px;" (click)="back()">
+      <ion-icon name="arrow-back"></ion-icon> ย้อนกลับ
+    </ion-button>
+  </ion-row>
+
+</ion-content>

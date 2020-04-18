@@ -1,0 +1,18 @@
+ion-tab-button {
+    ion-label {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+  ion-tab-bar{
+    height: 40px;
+  }
+  ion-tab-button {
+    --color-selected: red;
+  }
+  .selected {
+      border-bottom: solid 3px #ff0000;
+  }
+  .header-md:after{
+    background: none;;
+  }
